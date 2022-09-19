@@ -1,0 +1,9 @@
+{
+    "dependencies": {
+        "live-server": "^1.2.2"
+    },
+
+    "scripts": {
+        "dev" :" live-server public --port=3000 --host=localhost --no-browser"
+    }
+}
