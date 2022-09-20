@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+abbr[title] {
+  cursor: help;
+  text-decoration: none;
+}
+
+a {
+  cursor: pointer;
+  color: #0e739e;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+em {
+  font-style: normal;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+figure {
+  /* shorthand: 속성 값을 묶어서 간단하게 작성하는 방식 */
+  /* margin: top right bottom left;  */
+  /* margin: 0 0 0 0; */
+  /* margin: 0 0 0; */
+  /* margin: 0 0; */
+  margin: 0;
+
+  /* margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0; */
+}
+
+.Container {
+  width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Container--inner {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.Container--fluid {
+  width: 100%;
+  max-width: 1280px;
+}
+
+.fluid-image {
+  max-width: 744px;
+  width: 100%;
+  height: auto;
+}
+
+.site-info {
+  padding: 32px 0;
+  margin-bottom: 200px;
+}
+
+.code-block {
+  border-radius: 6px;
+  padding: 1em;
+  background-color: #222;
+  color: #eee;
+  line-height: 1.5;
+}
+
+.selector {
+  color:#0cf0f0;
+}
+
+.prop {
+  color: #e72084;
+}
+
+.table {
+  position: relative;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid;
+}
+
+.table--flexible {
+  width: 100%;
+}
+
+.table th {
+  text-align: left;
+  background: #f7f6f3;
+}
+
+.table th,
+.table td {
+  border: 1px solid;
+  padding: 0.7em;
+}
+
+.a11y-hidden, .sr-only {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0,0,0,0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+caption.a11y-hidden,
+caption.sr-only {
+  position: static;
+}
+
+.table__list {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.table__list li {
+  margin-bottom: 8px;
+}
+
+/* pseudo class */
+.table__list li:last-child {
+  margin-bottom: 0;
+}

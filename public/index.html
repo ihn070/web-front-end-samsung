@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>웹 애플리케이션을 구성하는 HTML 마크업</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="웹 애플리케이션 구조 작성 방법을 학습합니다." />
+    <link rel="icon" href="assets/favicon.png" />
+    <link rel="stylesheet" href="assets/styles/main.css" />
+  </head>
+
+  <body>
+
+    <!-- 헤더 > 내비게이션 > 대제목(하이퍼링크(브랜드(로고))) -->
+    <header class="Container Container--inner Container--fluid">
+      <h1>
+        <a href="/">
+          <abbr title="Mozilla Developer Network">MDN</abbr>
+        </a>
+      </h1>
+      <p>HTML &lt;html&gt; 요소는 HTML 문서의 루트(최상단 요소)를 나타내며, "루트 요소"라고도 부릅니다. 모든 다른 요소는 &lt;html&gt; 요소의 후손이어야 합니다.
+        (<a
+          href="https://developer.mozilla.org/ko/docs/Web/HTML/Element/html"
+          target="_blank"
+          rel="noopener noreferrer"
+          >
+            참고
+          </a>)
+      </p>
+
+      <nav>
+        <a href="./css-layout.html"><abbr title="Cascading Style Sheet">CSS</abbr> 레이아웃 디자인</a>
+      </nav>
+    </header>
+
+    <main class="Container Container--inner Container--fluid">
+      
+      <!-- section vs article vs nav vs aside -->
+
+      <!-- <img src="assets/images/root-element.png" alt="CSS 코드를 사용해 문서의 뿌리(root) 요소를 스타일링 하는 방법을 도표로 제공" width="100%" /> -->
+
+      <article>
+        <h2>이미지와 피규어</h2>
+        <figure>
+          <img class="fluid-image" src="assets/images/root-element.png" alt="" />
+          <figcaption>CSS 코드를 사용해 문서의 뿌리(root) 요소를 스타일링 하는 방법을 도표로 제공</figcaption>
+        </figure>
+      </article>
+
+      <section>
+        <h2>학습 주제</h2>
+        <ul lang="en">
+          <li><abbr title="Hyper Text Markup Language">HTML</abbr></li>
+          <li><abbr>CSS</abbr></li>
+          <li>ECMAScript (JavaScript)</li>
+          <li>Node.js</li>
+          <li>Webpack</li>
+          <li>React</li>
+          <li>Next.js</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>학습 방법</h2>
+  
+        <p>
+          온라인 화상 강의의 특성 상, 현장 강의를 수강하는 것과는 학습 환경이 다릅니다.
+        </p>
+        <p>
+          강의는 <em>각 주제의 개념을 설명 함과 동시에 라이브 코딩을 진행</em>합니다. 
+          그러므로 배움과 익힘의 시간을 병행하되, <em>강의에서 다룬 내용을 잘 정리</em>한 다음, 
+          추후에 시간을 내서 <em>다시 실습하며 익힐 것을 권장</em>합니다.
+        </p>
+      </section>
+
+      <article>
+        <h3>CSS Code Style</h3>
+        <pre class="code-block">
+<span class="selector">.Container--inner</span> {
+  <span class="prop">padding-left</span>: 24px;
+  <span class="prop">padding-right</span>: 24px;
+}
+
+<span class="selector">.Container--fluid</span> {
+  <span class="prop">width</span>: 100%;
+  <span class="prop">max-width</span>: 1280px;
+}
+</pre>
+      </article>
+
+      <section>
+        <h2>표 설계(design)</h2>
+        <table class="table table--flexible">
+          <caption class="a11y-hidden">HTML 용어 (자주 사용되는 HTML 용어에 대한 해설입니다)</caption>
+          <thead>
+            <tr>
+              <th scope="col">용어</th>
+              <th scope="col">설명</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Document</td>
+              <td>문서</td>
+            </tr>
+            <tr>
+              <td>Element</td>
+              <td>요소</td>
+            </tr>
+            <tr>
+              <td>Open Tag</td>
+              <td>여는 태그</td>
+            </tr>
+            <tr>
+              <td>Closed Tag</td>
+              <td>닫는 태그</td>
+            </tr>
+            <tr>
+              <td>Self Closed Tag</td>
+              <td>스스로 닫는 태그</td>
+            </tr>
+            <tr>
+              <td>Attribute</td>
+              <td>속성</td>
+            </tr>
+            <tr>
+              <td>Value</td>
+              <td>값</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>행,열 제목을 가진 표</h2>
+        <table class="table table--flexible">
+          <caption class="sr-only">웹 프론트엔드 펀더멘탈(Web Front-end) 학습 계획표</caption>
+          <colgroup>
+            <col width="120" />
+            <col />
+            <col width="60" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">차수</th>
+              <th scope="col">학습 주제</th>
+              <th scope="col">시간</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1일차</th>
+              <td>
+                <ul class="table__list">
+                  <li>웹 프로그래밍 이해</li>
+                  <li>웹 표준과 접근성</li>
+                  <li>HTML 마크업</li>
+                  <li>CSS 스타일링</li>
+                </ul>
+              </td>
+              <td><span aria-label="8시간">8H</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </main>
+
+    <footer class="site-info Container Container--inner Container--fluid">
+      <small>
+        Portions of this content are &copy;1998–2022 by individual <a href="https://mozilla.org">mozilla.org</a> contributors. Content available under a Creative Commons license.
+      </small>
+    </footer>
+
+  </body>
+
+</html>
