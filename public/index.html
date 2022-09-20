@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ECMAScript(JavaScript) 프로그래밍</title>
+    <link rel="icon" href="assets/favicon.png" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <!-- <script src="utils/typeOf.js"></script>
+    <script src="utils/dom.js"></script>
+    <script src="utils/darkMode.js"></script>
+    <script src="scripts/main.js" defer></script> -->
+    <script type="module" src="scripts/index.js" defer></script>
+    <!-- <script src="learn/05-type-conversion.js" defer></script> -->
+
+    <style>
+      p {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  
+  <body>
+    
+    <div id="target" class="container container--fluid container--inner">
+      <h1>Sass 프리프로세싱</h1>
+
+      <!-- Form Elements -->
+      <form class="Form">
+        
+        <div class="FormControl FormControl--vertical">
+          <label for="change-font-size">글자 크기 변경</label>
+          <input id="change-font-size" type="number" min="10" value="99" step="1" max="100" />
+        </div>
+        
+      </form>
+
+
+      <p data-target>Sass 전처리기를 사용해 CSS 파일로 컴파일</p>
+      
+      <!-- BEM 방법론 -->
+      <!-- WAI-ARIA 표준 기술 : 접근성 향상 -->
+      <!-- <div class="ButtonGroup">
+        <button type="button" aria-label="글자 크기 증가" class="Button Button--xl">+</button>
+        <button type="button" aria-label="글자 크기 감소" class="Button Button--xl Button--secondary">-</button>
+      </div> -->
+      <!-- <button type="button" class="Button Button--secondary">전송</button> -->
+      <!-- <button type="button" class="Button Button--xl" disabled>취소</button> -->
+
+      <button type="button" data-dark-mode class="Button Button--lg">다크 모드 전환</button>
+    </div>
+
+    <!-- defer 속성이 설정된 스크립트 실행 위치 -->
+  </body>
+
+</html>

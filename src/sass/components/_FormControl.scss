@@ -1,0 +1,29 @@
+@use 'sass:color';
+@use '../variables' as *;
+@use '../functions' as *;
+@use '../common' as *;
+
+.FormControl {
+  &--vertical {
+    display: inline-flex;
+    flex-flow: column wrap;
+  }
+
+  color: color.adjust($blue, $lightness: -10%);
+
+  label {
+    margin-bottom: rem(4);
+  }
+
+  &[data-hidden-label] label {
+    @extend %a11y-hidden;
+  }
+
+  input {
+    border: 1px solid currentColor;
+    border-radius: rem(8);
+    padding: em(8);
+    font-size: rem(16);
+    color: inherit;
+  }
+}
